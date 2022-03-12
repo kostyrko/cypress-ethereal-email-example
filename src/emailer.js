@@ -1,12 +1,14 @@
 // @ts-check
 // https://nodemailer.com/about/
 const nodemailer = require('nodemailer')
+require('dotenv').config();
 
 // a little wrapper object that makes
 // sending emails more convenient
 let emailSender
 
 const initEmailer = async () => {
+  console.log('initEmailer ')
   if (emailSender) {
     // already created
     return emailSender
