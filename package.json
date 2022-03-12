@@ -6,10 +6,7 @@
   "private": true,
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "next dev",
-    "cy:open": "cypress open",
-    "cy:run": "cypress run",
-    "local": "start-test 3000 cy:open"
+    "start": "next dev"
   },
   "keywords": [
     "cypress-example",
