@@ -1,5 +1,45 @@
 # cypress-ethereal-email-example
 
+## 1. Setup
+
+In this repository you will find a simple app created for testing purposes that will send and email with verification code to given email address.
+
+In order to run this app you will need to setup an account on [sendgrid.com](https://sendgrid.com/) a free one (100 emails per day) should suffice for purpose of this exercise.
+
+You will find that `.env` file is partially prefilled for you, all that you will need to paste is you **sendgrid** api key and verified sender email:
+
+```shell
+SENDGRID_HOST="smtp.sendgrid.net"
+SENDGRID_PORT="465"
+SENDGRID_USER="apikey"
+# paste api key here
+SENDGRID_PASSWORD=""
+# pasted verified sender email here
+SENDGRID_FROM=""
+```
+
+* In order to create and API key (once logged in) visit this url: [app.sendgrid.com/settings/api_keys](https://app.sendgrid.com/settings/api_keys) and click on **Create API Key** -> fill in API Key Name -> click 'Create & View' -> copy API Key.
+
+* In order to create a verified sender visit this url:
+[app.sendgrid.com/settings/sender_auth/senders](https://app.sendgrid.com/settings/sender_auth/senders) and click on **Create New Sender** -> fill address data -> click 'Create'.
+
+
+## 2. Installation + run
+
+```shell
+$ npm install
+$ npm start
+```
+
+watch on `localhost:3000`
+
+---
+
+Content below is from the original repository [bahmutov/cypress-ethereal-email-example](https://github.com/bahmutov/cypress-ethereal-email-example) - where you will find information about the original setup which is also available for this app, although keep in mind that cypress has been removed from the current setup.
+
+----
+## cypress-ethereal-email-example
+
 [![ci status][ci image]][ci url] [![badges status][badges image]][badges url] [![renovate-app badge][renovate-badge]][renovate-app] ![cypress version](https://img.shields.io/badge/cypress-9.5.1-brightgreen) [![cypress-ethereal-email-example](https://img.shields.io/endpoint?url=https://dashboard.cypress.io/badge/simple/v1m866/main&style=flat&logo=cypress)](https://dashboard.cypress.io/projects/v1m866/runs)
 
 > Using an external [Ethereal email](https://ethereal.email/) inbox and [Sendgrid](https://sendgrid.com/) to test emails
