@@ -1,5 +1,7 @@
 import { useState } from 'react'
 import 'tailwindcss/tailwind.css'
+import Confirm from  './confirm'
+
 
 export default function Home() {
   // once the user submitted the form the email will be set
@@ -27,6 +29,7 @@ export default function Home() {
 
   const EmailSent = () => {
     return (
+      <>
       <main className="mt-12 lg:mt-32">
         <section className="container w-full max-w-md m-auto items-center">
           <div className="text-center py-3 px-12 bg-green-400 mt-5 mr-5 rounded-md text-white text-lg focus:outline-none w-full">
@@ -37,6 +40,8 @@ export default function Home() {
           </div>
         </section>
       </main>
+      <Confirm/>
+      </>
     )
   }
 
